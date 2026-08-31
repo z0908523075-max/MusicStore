@@ -3,6 +3,29 @@
     padding-bottom: 20px;
 }
 
+@keyframes fade-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float-showcase {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -43,6 +66,31 @@ input[type="checkbox"].input-validation-error {
 
 
 /* Music Store additions */
+
+.home-hero {
+    overflow: hidden;
+}
+
+.home-hero-title,
+.home-hero-image,
+.album-item {
+    animation: fade-slide-up 0.7s ease-out both;
+}
+
+.home-hero-image {
+    display: block;
+    max-width: 100%;
+    margin: 20px auto 0;
+    animation: fade-slide-up 0.7s ease-out both, float-showcase 4s ease-in-out 0.7s infinite;
+}
+
+.album-item {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.album-item:hover {
+    transform: translateY(-6px);
+}
 
 ul#album-list li {
     height: 160px;

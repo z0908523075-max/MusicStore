@@ -3,15 +3,15 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>@AppSettings.Value.SiteTitle</h1>
-    <img src="~/Images/home-showcase.png" />
+<div class="jumbotron home-hero">
+    <h1 class="home-hero-title">@AppSettings.Value.SiteTitle</h1>
+    <img class="home-hero-image" src="~/Images/home-showcase.png" />
 </div>
 
 <ul class="row list-unstyled" id="album-list">
     @foreach (var album in Model)
     {
-    <li class="col-lg-2 col-md-2 col-sm-2 col-xs-4 container">
+    <li class="col-lg-2 col-md-2 col-sm-2 col-xs-4 container album-item">
         <a asp-controller="Store" asp-action="Details" asp-route-id="@album.AlbumId">
             <img alt="@album.Title" src="@Url.Content(@album.AlbumArtUrl)" />
             <h4>@album.Title</h4>
