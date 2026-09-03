@@ -1,7 +1,7 @@
 ﻿@model Order
 
 @{
-    ViewBag.Title = "Address And Payment";
+    ViewBag.Title = "寄送與付款地址";
 }
 
 @section Scripts {
@@ -9,25 +9,25 @@
 }
 
 <form asp-antiforgery="true">
-    <h2>Address And Payment</h2>
+    <h2>寄送與付款地址</h2>
     <hr />
     <div asp-validation-summary="All" class="text-danger"></div>
     <fieldset>
-        <legend>Shipping Information</legend>
+        <legend>收件人與寄送資訊</legend>
 
         @Html.EditorForModel()
     </fieldset>
     <fieldset>
-        <legend>Payment</legend>
-        <p>We're running a promotion: all music is free with the promo code: "FREE"</p>
+        <legend>付款資訊</legend>
+        <p>我們目前正在舉辦促銷活動：輸入優惠碼「FREE」即可免費獲得所有音樂！</p>
 
         <div class="editor-label">
-            <label title="Promo Code">Promo Code</label>
+            <label title="優惠碼">優惠碼</label>
         </div>
         <div class="editor-field">
             @Html.TextBox("PromoCode")
         </div>
     </fieldset>
 
-    <input type="submit" value="Submit Order" />
+    <input type="submit" value="送出訂單" />
 </form>
