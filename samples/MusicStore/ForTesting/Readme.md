@@ -1,1 +1,1 @@
-The contents of this folder are used for end to end testing.
+此資料夾的內容用於端到端 (End-to-End) 測試。

@@ -1,32 +1,32 @@
-MusicStore (Sample ASP.NET Core application)
+MusicStore (ASP.NET Core 範例應用程式)
 ============================================
 
 AppVeyor: [![AppVeyor](https://ci.appveyor.com/api/projects/status/ja8a7j6jscj7k3xa/branch/dev?svg=true)](https://ci.appveyor.com/project/aspnetci/MusicStore/branch/dev)
 
 Travis:   [![Travis](https://travis-ci.org/aspnet/MusicStore.svg?branch=dev)](https://travis-ci.org/aspnet/MusicStore)
 
-This project is part of ASP.NET Core. You can find samples, documentation and getting started instructions for ASP.NET Core at the [Home](https://github.com/aspnet/home) repo.
+此專案是 ASP.NET Core 的一部分。您可以在 [Home](https://github.com/aspnet/home) 存放庫中找到 ASP.NET Core 的範例、文件和入門說明。
 
-## Run the application:
-* If you have Visual Studio 2017
-	1. Open MusicStore.sln in Visual Studio 2017 and run the individual applications on `IIS Express`.
+## 執行應用程式：
+* 如果您有 Visual Studio 2017
+	1. 在 Visual Studio 2017 中開啟 `MusicStore.sln`，並在 `IIS Express` 上執行各個應用程式。
 
-* If you don't have Visual Studio 2017
-	1. Open a command prompt and execute `cd \src\MusicStore\`.
-	2. Execute `dotnet restore`.
+* 如果您沒有 Visual Studio 2017
+	1. 開啟命令提示字元並執行 `cd \src\MusicStore\`。
+	2. 執行 `dotnet restore`。
 
-**NOTE:** App and tests require Visual Studio 2017 LocalDB on the machine to run.
-**NOTE:** Since SQL Server is not generlly available on Mac, the InMemoryStore is used to run the application. So the changes that you make will not be persisted.
+**注意：** 應用程式和測試需要本機安裝 Visual Studio 2017 LocalDB 才能執行。
+**注意：** 由於 Mac 上通常無法使用 SQL Server，因此會使用 `InMemoryStore` 來執行應用程式。所以您所做的變更將不會保留。
 
-## Run on Docker Windows Containers
+## 在 Docker Windows 容器上執行
 
- * [Install Docker for Windows](https://docs.docker.com/docker-for-windows/) or [setup up Docker Windows containers](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/containers_welcome)
+ * [安裝 Docker for Windows](https://docs.docker.com/docker-for-windows/) 或 [設定 Docker Windows 容器](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/containers_welcome)
  * `docker-compose -f .\docker-compose.windows.yml build`
  * `docker-compose -f .\docker-compose.windows.yml up`
- * Access MusicStore on either the Windows VM IP or (if container is running locally) on the container IP: `docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" musicstore_web_1`
+ * 在 Windows VM IP 或（如果容器在本機執行）容器 IP 上存取 MusicStore：`docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" musicstore_web_1`
 
-## NTLM authentication
-More information at [src/MusicStore/StartupNtlmAuthentication.cs](src/MusicStore/StartupNtlmAuthentication.cs).
+## NTLM 驗證
+更多資訊請參閱 [src/MusicStore/StartupNtlmAuthentication.cs](src/MusicStore/StartupNtlmAuthentication.cs)。
 
-## OpenIdConnect authentication
-More information at [src/MusicStore/StartupOpenIdConnect.cs](src/MusicStore/StartupOpenIdConnect.cs).
+## OpenIdConnect 驗證
+更多資訊請參閱 [src/MusicStore/StartupOpenIdConnect.cs](src/MusicStore/StartupOpenIdConnect.cs)。

@@ -1,4 +1,5 @@
-Contributing
+貢獻指南
 ======
 
-Information on contributing to this repo is in the [Contributing Guide](https://github.com/aspnet/Home/blob/dev/CONTRIBUTING.md) in the Home repo.
+有關貢獻此存放庫的資訊，請參閱 Home 存放庫中的 [貢獻指南](https://github.com/aspnet/Home/blob/dev/CONTRIBUTING.md)。
+
