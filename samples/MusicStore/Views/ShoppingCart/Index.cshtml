@@ -1,7 +1,7 @@
 @model MusicStore.ViewModels.ShoppingCartViewModel
 @inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf
 @{
-    ViewBag.Title = "Shopping Cart";
+    ViewBag.Title = "購物車";
 }
 
 @functions
@@ -53,23 +53,23 @@
 }
 
 <h3>
-    <em>Review</em> your cart:
+    <em>確認</em>您的購物車：
 </h3>
 <p class="button">
-    <a asp-controller="Checkout" asp-action="AddressAndPayment">Checkout >></a>
+    <a asp-controller="Checkout" asp-action="AddressAndPayment">前往結帳 >></a>
 </p>
 <div id="update-message">
 </div>
 <table id="cart-summary" class="table table-bordered table-responsive table-hover table-striped">
     <tr>
         <th>
-            Album Name
+            專輯名稱
         </th>
         <th>
-            Price (each)
+            單價
         </th>
         <th>
-            Quantity
+            數量
         </th>
         <th></th>
     </tr>
@@ -88,14 +88,14 @@
             <td>
                 <a href="#" class="RemoveLink" data-id="@item.CartItemId"
                    data-url='@Url.Content("~/ShoppingCart/RemoveFromCart")'>
-                    Remove from cart
+                    從購物車中移除
                 </a>
             </td>
         </tr>
     }
     <tr>
         <td>
-            Total
+            總計
         </td>
         <td></td>
         <td></td>
