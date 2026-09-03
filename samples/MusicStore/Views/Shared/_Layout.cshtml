@@ -37,7 +37,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">首頁</a></li>
                     @await Component.InvokeAsync("GenreMenu")
                     @await Component.InvokeAsync("CartSummary")
                 </ul>
@@ -50,7 +50,7 @@
         <hr />
         <footer class="navbar navbar-fixed-bottom navbar-default text-center">
             <p><a href="https://www.github.com/aspnet/MusicStore">www.github.com/aspnet/MusicStore</a></p>
-            <small>@Html.ActionLink("admin", "Index", "StoreManager", new { area = "Admin" })</small>
+            <small>@Html.ActionLink("管理後台", "Index", "StoreManager", new { area = "Admin" })</small>
         </footer>
     </div>
 

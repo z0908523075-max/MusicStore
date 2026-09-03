@@ -9,9 +9,9 @@
     <form asp-area="" asp-controller="Account" asp-action="LogOff" method="post" id="logoutForm" class="navbar-right">
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage">Hello @UserManager.GetUserName(User)!</a>
+                <a asp-area="" asp-controller="Manage" asp-action="Index" title="管理帳號">您好，@UserManager.GetUserName(User)！</a>
             </li>
-            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">登出</a></li>
         </ul>
     </form>
 }
@@ -20,14 +20,14 @@ else if (User.Identity.IsAuthenticated)
     //This code block necessary only for NTLM authentication
     <ul class="nav navbar-nav navbar-right">
         <li>
-            <p class="nav navbar-text navbar-right">Hello, @UserManager.GetUserName(User)!</p>
+            <p class="nav navbar-text navbar-right">您好，@UserManager.GetUserName(User)！</p>
         </li>
     </ul>
 }
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li><a id="registerLink" asp-controller="Account" asp-action="Register">Register</a></li>
-        <li><a id="loginLink" asp-controller="Account" asp-action="Login">Log in</a></li>
+        <li><a id="registerLink" asp-controller="Account" asp-action="Register">註冊</a></li>
+        <li><a id="loginLink" asp-controller="Account" asp-action="Login">登入</a></li>
     </ul>
 }
