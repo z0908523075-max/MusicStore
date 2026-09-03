@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<Genre>
 @{
-    ViewBag.Title = "Store";
+    ViewBag.Title = "商店";
 }
-<h3>Browse Genres</h3>
+<h3>瀏覽音樂流派</h3>
 
 <p>
-    Select from @Model.Count() genres:
+    從 @Model.Count() 個音樂流派中選擇：
 </p>
 <ul class="list-group">
     @foreach (var genre in Model)

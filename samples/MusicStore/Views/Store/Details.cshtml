@@ -1,7 +1,7 @@
 ﻿@model Album
 
 @{
-    ViewBag.Title = "Album - " + Model.Title;
+    ViewBag.Title = "專輯 - " + Model.Title;
 }
 
 <h2>@Model.Title</h2>
@@ -12,18 +12,18 @@
 
 <div id="album-details">
     <p>
-        <em>Genre:</em>
+        <em>流派：</em>
         @Model.Genre.Name
     </p>
     <p>
-        <em>Artist:</em>
+        <em>演出者：</em>
         @Model.Artist.Name
     </p>
     <p>
-        <em>Price:</em>
+        <em>價格：</em>
         <label>@Model.Price</label>
     </p>
     <p class="button">
-        <a asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-id="@Model.AlbumId">Add to cart</a>
+        <a asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-id="@Model.AlbumId">加入購物車</a>
     </p>
 </div>
